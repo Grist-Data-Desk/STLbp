@@ -1,0 +1,32 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.32.0-Lima">
+  <identifier>https://gis2.statelands.wyo.gov/arcgis/rest/services/Services/MapViewerService2/MapServer/18</identifier>
+  <parentidentifier></parentidentifier>
+  <language></language>
+  <type>dataset</type>
+  <title>StateSurfaceOwnership</title>
+  <abstract>&lt;DIV STYLE="text-align:Left;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>&lt;SPAN>This dataset contains all the surface and subsurface ownership. In order to correctly view current surface or subsurface ownership, the following specific queries need to be utilized: &lt;/SPAN>&lt;/SPAN>&lt;/P>&lt;UL STYLE="margin:0 0 0 0;padding:0 0 0 0;">&lt;LI STYLE="margin:0 0 0 48;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>&lt;SPAN>Surface Only:  SurfaceOwnership = 'Y' AND SubsurfaceOwnership IN ( '2', '4', '5') AND IsActive = 1 (This views only where the state owns the surface.)&lt;/SPAN>&lt;/SPAN>&lt;/P>&lt;/LI>&lt;LI STYLE="margin:0 0 0 48;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>&lt;SPAN>Subsurface Only:  SubsurfaceOwnership IN ('1', '3') AND SurfaceOwnership IN ('N', 'C', 'U') AND IsActive = 1 (This views only where the state owns the subsurface.)&lt;/SPAN>&lt;/SPAN>&lt;/P>&lt;/LI>&lt;LI STYLE="margin:0 0 0 48;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>&lt;SPAN>Surface and Subsurface:  SurfaceOwnership = 'Y' AND SubsurfaceOwnership IN ('1', '3') AND IsActive = 1 (This views parcels where the state owns both surface and subsurface for the same parcel.)&lt;/SPAN>&lt;/SPAN>&lt;/P>&lt;/LI>&lt;LI STYLE="margin:0 0 0 48;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>&lt;SPAN>Surface Ownership: SurfaceOwnership = 'Y' and IsActive = 1 (This views all the state surface ownership, which may include state subsurface ownership where owned.)&lt;/SPAN>&lt;/SPAN>&lt;/P>&lt;/LI>&lt;LI STYLE="margin:0 0 0 48;">&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>Subsurface Ownership: SubsurfaceOwnership IN ('1','3') AND IsActive = 1 (This views all the state subsurface ownership, which may include state surface ownership where owned.)&lt;/SPAN>&lt;/P>&lt;/LI>&lt;/UL>&lt;DIV>&lt;DIV>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>The following provide the key to the OSLI GIS data coded values:&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN />&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>1. State Surface Ownership Layer&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  Field: Surface Ownership&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  Coded Values:&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  Y = Yes&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  N = No&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  U = Unknown&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  C = Conflict&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN />&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>2.               State Subsurface Ownership Layer&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  Field: Subsurface Ownership&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  Coded Values:&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  1 = All&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  2 = None&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  3 = Partial&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  4 = Unknown&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                  5 = Conflict&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN />&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>3.              State Land Public Access Layer&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 Field: Access&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 Coded Values:&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 1 = Parcels With Road Access or Adjacent State Land Access&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 2 = Parcels With Adjacent Public Access&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 3 = Parcels With Possible Water Access&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 4 = No Known Public Access&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN>                 5 = Research Needed&lt;/SPAN>&lt;/P>&lt;P STYLE="margin:0 0 0 0;">&lt;SPAN />&lt;/P>&lt;/DIV>&lt;/DIV>&lt;/DIV></abstract>
+  <links>
+    <link format="" size="" type="WWW:LINK" description="" name="Source" url="https://gis2.statelands.wyo.gov/arcgis/rest/services/Services/MapViewerService2/MapServer/18" mimeType=""/>
+  </links>
+  <dates/>
+  <fees></fees>
+  <rights>This dataset is created and maintained by the OSLI GIS team on what the OSLI inventories.</rights>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt></wkt>
+      <proj4>+proj=lcc +lat_0=41 +lon_0=-107.5 +lat_1=41 +lat_2=45 +x_0=500000 +y_0=200000 +ellps=GRS80 +towgs84=0.9956,-1.9013,-0.5215,-0.025915,-0.009426,-0.011599,0.00062 +units=m +no_defs</proj4>
+      <srsid>60630</srsid>
+      <srid>520000630</srid>
+      <authid>ESRI:102212</authid>
+      <description>NAD_1983_WyLAM</description>
+      <projectionacronym>lcc</projectionacronym>
+      <ellipsoidacronym></ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent>
+    <spatial dimensions="2" minz="0" minx="203624.1463000025250949" maxy="647652.34059999976307154" maxx="788452.69049999909475446" crs="ESRI:102212" maxz="0" miny="200255.32679999899119139"/>
+  </extent>
+</qgis>

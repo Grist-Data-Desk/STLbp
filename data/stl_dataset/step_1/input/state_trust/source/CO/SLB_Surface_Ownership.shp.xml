@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata xml:lang="en">
+	<Esri>
+		<CreaDate>20230823</CreaDate>
+		<CreaTime>10415200</CreaTime>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<SyncOnce>FALSE</SyncOnce>
+		<DataProperties>
+			<itemProps>
+				<itemName Sync="TRUE">SLB_Surface_Ownership</itemName>
+				<imsContentType Sync="TRUE">002</imsContentType>
+				<itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\DNRSLBDEN155\G$\Shared drives\SLB Website LIVE\esri maps\GIS_Shapefiles_Website_Update\SLB_Surface_Ownership\SLB_Surface_Ownership.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps>
+			<coordRef>
+				<type Sync="TRUE">Projected</type>
+				<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+				<csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits>
+				<projcsn Sync="TRUE">WGS_1984_Web_Mercator_Auxiliary_Sphere</projcsn>
+				<peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.1.0'&gt;&lt;WKT&gt;PROJCS[&amp;quot;WGS_1984_Web_Mercator_Auxiliary_Sphere&amp;quot;,GEOGCS[&amp;quot;GCS_WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Mercator_Auxiliary_Sphere&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,0.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,0.0],PARAMETER[&amp;quot;Standard_Parallel_1&amp;quot;,0.0],PARAMETER[&amp;quot;Auxiliary_Sphere_Type&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,3857]],VERTCS[&amp;quot;WGS_1984&amp;quot;,DATUM[&amp;quot;D_WGS_1984&amp;quot;,SPHEROID[&amp;quot;WGS_1984&amp;quot;,6378137.0,298.257223563]],PARAMETER[&amp;quot;Vertical_Shift&amp;quot;,0.0],PARAMETER[&amp;quot;Direction&amp;quot;,1.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;Esri&amp;quot;,115700]]&lt;/WKT&gt;&lt;XOrigin&gt;-20037700&lt;/XOrigin&gt;&lt;YOrigin&gt;-30241100&lt;/YOrigin&gt;&lt;XYScale&gt;148923141.92838538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;102100&lt;/WKID&gt;&lt;LatestWKID&gt;3857&lt;/LatestWKID&gt;&lt;VCSWKID&gt;115700&lt;/VCSWKID&gt;&lt;LatestVCSWKID&gt;115700&lt;/LatestVCSWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml>
+			</coordRef>
+			<lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\ExportFeatures" Date="20231107" Time="093703">ExportFeatures "SLB Ownership\SLB_Surface_Ownership" "G:\Shared drives\SLB Website LIVE\esri maps\GIS_Shapefiles_Website_Update\SLB_Surface_Ownership\SLB_Surface_Ownership.shp" # NOT_USE_ALIAS "Asset_Layer "Asset Layer" true true false 20 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Asset_Layer,0,20;Net_ID "Netsuite FAM" true true false 255 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Net_ID,0,255;Property_Name "Property Name" true true false 50 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Property_Name,0,50;Alt_Name "Alternate Name" true true false 50 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Alt_Name,0,50;Net_Asset_Name "Netsuite Asset Name" true true false 70 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Net_Asset_Name,0,70;ns_int_id "Netsuite Ownership ID" true true false 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,ns_int_id,-1,-1;Township "Township" true true false 8 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Township,0,8;Range "Range" true true false 8 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Range,0,8;Section "Section" true true false 0 Long 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Section,-1,-1;GIS_Legal "Legal Description" true true false 188 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,GIS_Legal,0,188;Acreage "Legal Acreage" true true false 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Acreage,-1,-1;Parcel_Comment "Parcel Comment" true true false 254 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Parcel_Comment,0,254;GIS_Acreage "GIS Acreage" true true false 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,GIS_Acreage,-1,-1;GIS_Difference "GIS Difference Acreage" true true false 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,GIS_Difference,-1,-1;Meridian "Meridian" true true false 20 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Meridian,0,20;County "County" true true false 15 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,County,0,15;Beneficiary "Beneficiary" true true false 25 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Beneficiary,0,25;TRS_Merge "TRS Merge (Shawn)" true true false 15 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,TRS_Merge,0,15;Section_TF "Section - Text Format (Shawn)" true true false 3 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Section_TF,0,3;WebMap_FAM "Webmap FAM Labels" true true false 255 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,WebMap_FAM,0,255;Hyperlink "Netsuite Record" true true false 255 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Hyperlink,0,255;FAM_url "FAM url" true true false 255 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,FAM_url,0,255;GlobalID "GlobalID" false false true 38 Text 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,GlobalID,-1,-1;Shape__Area "Shape__Area" false true true 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Shape__Area,-1,-1;Shape__Length "Shape__Length" false true true 0 Double 0 0,First,#,SLB Ownership\SLB_Surface_Ownership,Shape__Length,-1,-1" #</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\DeleteField" Date="20231107" Time="093740">DeleteField SLB_Surface_Ownership Hyperlink;FAM_url "Delete Fields"</Process></lineage><LayerFile>{"type":"CIMLayerDocument","version":"2.7.0","build":26828,"layers":["CIMPATH=trustlands/slb_surface_ownership_backup.xml"],"layerDefinitions":[{"type":"CIMFeatureLayer","name":"SLB_Surface_Ownership_Backup","uRI":"CIMPATH=trustlands/slb_surface_ownership_backup.xml","sourceModifiedTime":{"type":"TimeInstant"},"useSourceMetadata":true,"description":"SLB_Surface_Ownership_Backup","layerElevation":{"type":"CIMLayerElevationSurface","mapElevationID":"{672700BD-0DAB-45CE-BFA1-01F6D6B8FEF0}"},"expanded":true,"layerType":"Operational","showLegends":true,"transparency":30,"visibility":true,"displayCacheType":"Permanent","maxDisplayCacheAge":5,"popupInfo":{"type":"CIMPopupInfo","title":"{Net_ID}","mediaInfos":[{"type":"CIMTableMediaInfo","refreshRateUnit":"esriTimeUnitsSeconds","rowSpan":1,"columnSpan":1,"fields":["Asset_Layer","Net_ID","Property_Name","Alt_Name","Net_Asset_Name","ns_int_id","Township","Range","Section","GIS_Legal","Acreage","Parcel_Comment","GIS_Acreage","GIS_Difference","Meridian","County","Beneficiary","TRS_Merge","Section_TF","OBJECTID","Shape_Leng","GlobalID","Shape__Area","Shape__Length"]}],"gridLayout":{"type":"CIMPopupLayout","columnWidths":[100],"borderWidth":0,"borderColor":{"type":"CIMRGBColor","values":[0,0,0,100]}}},"showPopups":true,"serviceLayerID":-1,"refreshRate":-1,"refreshRateUnit":"esriTimeUnitsSeconds","blendingMode":"Alpha","autoGenerateFeatureTemplates":true,"featureElevationExpression":"0","featureTable":{"type":"CIMFeatureTable","displayField":"Property_Name","editable":true,"dataConnection":{"type":"CIMStandardDataConnection"},"studyAreaSpatialRel":"esriSpatialRelUndefined","searchOrder":"esriSearchOrderSpatial"},"htmlPopupEnabled":true,"selectable":true,"featureCacheType":"Session","displayFiltersType":"ByScale","featureBlendingMode":"Alpha","labelClasses":[{"type":"CIMLabelClass","expressionTitle":"Custom","expression":"$feature.Net_ID","expressionEngine":"Arcade","featuresToLabel":"AllVisibleFeatures","maplexLabelPlacementProperties":{"type":"CIMMaplexLabelPlacementProperties","featureType":"Polygon","avoidPolygonHoles":true,"canOverrunFeature":true,"canPlaceLabelOutsidePolygon":true,"canRemoveOverlappingLabel":true,"canStackLabel":true,"connectionType":"Unambiguous","constrainOffset":"NoConstraint","contourAlignmentType":"Page","contourLadderType":"Straight","contourMaximumAngle":90,"enableConnection":true,"featureWeight":0,"fontHeightReductionLimit":4,"fontHeightReductionStep":0.5,"fontWidthReductionLimit":90,"fontWidthReductionStep":5,"graticuleAlignmentType":"Straight","keyNumberGroupName":"Default","labelBuffer":15,"labelLargestPolygon":true,"labelPriority":-1,"labelStackingProperties":{"type":"CIMMaplexLabelStackingProperties","stackAlignment":"ChooseBest","maximumNumberOfLines":3,"minimumNumberOfCharsPerLine":3,"maximumNumberOfCharsPerLine":24,"separators":[{"type":"CIMMaplexStackingSeparator","separator":"\u00A0\n\t\t\t\t","splitAfter":true},{"type":"CIMMaplexStackingSeparator","separator":",","visible":true,"splitAfter":true}]},"lineFeatureType":"General","linePlacementMethod":"OffsetCurvedFromLine","maximumLabelOverrun":80,"maximumLabelOverrunUnit":"Point","minimumFeatureSizeUnit":"Map","multiPartOption":"OneLabelPerPart","offsetAlongLineProperties":{"type":"CIMMaplexOffsetAlongLineProperties","placementMethod":"BestPositionAlongLine","labelAnchorPoint":"CenterOfLabel","distanceUnit":"Percentage","useLineDirection":true},"pointExternalZonePriorities":{"type":"CIMMaplexExternalZonePriorities","aboveLeft":4,"aboveCenter":2,"aboveRight":1,"centerRight":3,"belowRight":5,"belowCenter":7,"belowLeft":8,"centerLeft":6},"pointPlacementMethod":"AroundPoint","polygonAnchorPointType":"GeometricCenter","polygonBoundaryWeight":0,"polygonExternalZones":{"type":"CIMMaplexExternalZonePriorities","aboveLeft":4,"aboveCenter":2,"aboveRight":1,"centerRight":3,"belowRight":5,"belowCenter":7,"belowLeft":8,"centerLeft":6},"polygonFeatureType":"General","polygonInternalZones":{"type":"CIMMaplexInternalZonePriorities","center":1},"polygonPlacementMethod":"HorizontalInPolygon","primaryOffset":1,"primaryOffsetUnit":"Point","removeExtraWhiteSpace":true,"repetitionIntervalUnit":"Point","rotationProperties":{"type":"CIMMaplexRotationProperties","rotationType":"Arithmetic","alignmentType":"Straight"},"secondaryOffset":100,"strategyPriorities":{"type":"CIMMaplexStrategyPriorities","stacking":1,"overrun":2,"fontCompression":3,"fontReduction":4,"abbreviation":5},"thinningDistanceUnit":"Point","truncationMarkerCharacter":".","truncationMinimumLength":1,"truncationPreferredCharacters":"aeiou","truncationExcludedCharacters":"0123456789","polygonAnchorPointPerimeterInsetUnit":"Point"},"name":"Class 1","priority":-1,"standardLabelPlacementProperties":{"type":"CIMStandardLabelPlacementProperties","featureType":"Line","featureWeight":"None","labelWeight":"High","numLabelsOption":"OneLabelPerName","lineLabelPosition":{"type":"CIMStandardLineLabelPosition","above":true,"inLine":true,"parallel":true},"lineLabelPriorities":{"type":"CIMStandardLineLabelPriorities","aboveStart":3,"aboveAlong":3,"aboveEnd":3,"centerStart":3,"centerAlong":3,"centerEnd":3,"belowStart":3,"belowAlong":3,"belowEnd":3},"pointPlacementMethod":"AroundPoint","pointPlacementPriorities":{"type":"CIMStandardPointPlacementPriorities","aboveLeft":2,"aboveCenter":2,"aboveRight":1,"centerLeft":3,"centerRight":2,"belowLeft":3,"belowCenter":3,"belowRight":2},"rotationType":"Arithmetic","polygonPlacementMethod":"AlwaysHorizontal"},"textSymbol":{"type":"CIMSymbolReference","symbol":{"type":"CIMTextSymbol","blockProgression":"TTB","depth3D":1,"extrapolateBaselines":true,"fontEffects":"Normal","fontEncoding":"Unicode","fontFamilyName":"Tahoma","fontStyleName":"Regular","fontType":"Unspecified","haloSize":1,"height":10,"hinting":"Default","horizontalAlignment":"Left","kerning":true,"letterWidth":100,"ligatures":true,"lineGapType":"ExtraLeading","symbol":{"type":"CIMPolygonSymbol","symbolLayers":[{"type":"CIMSolidFill","enable":true,"color":{"type":"CIMRGBColor","values":[0,0,0,100]}}]},"textCase":"Normal","textDirection":"LTR","verticalAlignment":"Bottom","verticalGlyphOrientation":"Right","wordSpacing":100,"billboardMode3D":"FaceNearPlane"}},"useCodedValue":true,"visibility":true,"iD":-1}],"renderer":{"type":"CIMSimpleRenderer","patch":"Default","symbol":{"type":"CIMSymbolReference","symbol":{"type":"CIMPolygonSymbol","symbolLayers":[{"type":"CIMSolidStroke","enable":true,"colorLocked":true,"capStyle":"Butt","joinStyle":"Round","lineStyle3D":"Strip","miterLimit":10,"width":0.5,"color":{"type":"CIMRGBColor","values":[0,0,0,100]}},{"type":"CIMSolidFill","enable":true,"color":{"type":"CIMRGBColor","values":[110,196,232,100]}}]}}},"scaleSymbols":true,"snappable":true}]}</LayerFile></DataProperties>
+		<SyncDate>20231107</SyncDate>
+		<SyncTime>09364000</SyncTime>
+		<ModDate>20231107</ModDate>
+		<ModTime>09364000</ModTime>
+	</Esri>
+	<dataIdInfo>
+		<envirDesc Sync="FALSE">Esri ArcGIS 12.7.3.26828</envirDesc>
+		<dataLang>
+			<languageCode Sync="TRUE" value="eng"/>
+			<countryCode Sync="TRUE" value="USA"/>
+		</dataLang>
+		<idCitation>
+			<resTitle Sync="TRUE">SLB_Surface_Ownership</resTitle>
+			<presForm>
+				<PresFormCd Sync="TRUE" value="005"/>
+			</presForm>
+		</idCitation>
+		<spatRpType>
+			<SpatRepTypCd Sync="TRUE" value="001"/>
+		</spatRpType>
+		<idAbs/>
+		<searchKeys>
+			<keyword>Master</keyword>
+			<keyword>Surface</keyword>
+			<keyword>Map Server</keyword>
+			<keyword>Trustlands 2</keyword>
+			<keyword>Ownership</keyword>
+		</searchKeys>
+		<idPurp>SLB Surface Ownership - Master</idPurp>
+		<idCredit/>
+		<resConst>
+			<Consts>
+				<useLimit/>
+			</Consts>
+		</resConst>
+	</dataIdInfo>
+	<mdLang>
+		<languageCode Sync="TRUE" value="eng"/>
+		<countryCode Sync="TRUE" value="USA"/>
+	</mdLang>
+	<mdChar>
+		<CharSetCd Sync="TRUE" value="004"/>
+	</mdChar>
+	<distInfo>
+		<distFormat>
+			<formatName Sync="TRUE">Shapefile</formatName>
+		</distFormat>
+		<distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo>
+	<mdHrLv>
+		<ScopeCd Sync="TRUE" value="005"/>
+	</mdHrLv>
+	<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+	<refSysInfo>
+		<RefSystem>
+			<refSysID>
+				<identCode Sync="TRUE" code="3857"/>
+				<idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+				<idVersion Sync="TRUE">6.18.3(9.3.1.2)</idVersion>
+			</refSysID>
+		</RefSystem>
+	</refSysInfo>
+	<spatRepInfo>
+		<VectSpatRep><geometObjs Name="SLB_Surface_Ownership"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo>
+	<spdoinfo>
+		<ptvctinf><esriterm Name="SLB_Surface_Ownership"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<eainfo>
+		<detailed Name="SLB_Surface_Ownership">
+			<enttyp>
+				<enttypl Sync="TRUE">SLB_Surface_Ownership</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt>
+				<enttypc Sync="TRUE">0</enttypc>
+			</enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attalias Sync="TRUE">Shape</attalias>
+				<attrtype Sync="TRUE">Geometry</attrtype>
+				<attwidth Sync="TRUE">0</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">Esri</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Asset_Laye</attrlabl><attalias Sync="TRUE">Asset_Laye</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">Net_ID</attrlabl>
+				<attalias Sync="TRUE">Net_ID</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">254</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Property_N</attrlabl><attalias Sync="TRUE">Property_N</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">Alt_Name</attrlabl>
+				<attalias Sync="TRUE">Alt_Name</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">50</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Net_Asset_</attrlabl><attalias Sync="TRUE">Net_Asset_</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">70</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">ns_int_id</attrlabl>
+				<attalias Sync="TRUE">ns_int_id</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">19</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Township</attrlabl>
+				<attalias Sync="TRUE">Township</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Range</attrlabl>
+				<attalias Sync="TRUE">Range</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">8</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Section</attrlabl>
+				<attalias Sync="TRUE">Section</attalias>
+				<attrtype Sync="TRUE">Integer</attrtype>
+				<attwidth Sync="TRUE">10</attwidth>
+				<atprecis Sync="TRUE">10</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">GIS_Legal</attrlabl>
+				<attalias Sync="TRUE">GIS_Legal</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">188</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Acreage</attrlabl>
+				<attalias Sync="TRUE">Acreage</attalias>
+				<attrtype Sync="TRUE">Double</attrtype>
+				<attwidth Sync="TRUE">19</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Parcel_Com</attrlabl><attalias Sync="TRUE">Parcel_Com</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">GIS_Acreag</attrlabl><attalias Sync="TRUE">GIS_Acreag</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">GIS_Differ</attrlabl><attalias Sync="TRUE">GIS_Differ</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">Meridian</attrlabl>
+				<attalias Sync="TRUE">Meridian</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">20</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">County</attrlabl>
+				<attalias Sync="TRUE">County</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">15</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">Beneficiar</attrlabl><attalias Sync="TRUE">Beneficiar</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">25</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">TRS_Merge</attrlabl>
+				<attalias Sync="TRUE">TRS_Merge</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">15</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr>
+				<attrlabl Sync="TRUE">Section_TF</attrlabl>
+				<attalias Sync="TRUE">Section_TF</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">3</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">WebMap_FAM</attrlabl><attalias Sync="TRUE">WebMap_FAM</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Hyperlink</attrlabl><attalias Sync="TRUE">Hyperlink</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl Sync="TRUE">GlobalID</attrlabl>
+				<attalias Sync="TRUE">GlobalID</attalias>
+				<attrtype Sync="TRUE">String</attrtype>
+				<attwidth Sync="TRUE">38</attwidth>
+				<atprecis Sync="TRUE">0</atprecis>
+				<attscale Sync="TRUE">0</attscale>
+			</attr>
+			<attr><attrlabl Sync="TRUE">FAM_url</attrlabl><attalias Sync="TRUE">FAM_url</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Shape__Are</attrlabl><attalias Sync="TRUE">Shape__Are</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">Shape__Len</attrlabl><attalias Sync="TRUE">Shape__Len</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+	</eainfo>
+	<mdDateSt Sync="TRUE">20231107</mdDateSt>
+	<Binary>
+		<Thumbnail>
+			<Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIASwDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+jtX
+MHw/rJjYf29LuwQpwRiuigRoraNHYsyqASTnJ+uB/KgCQfdFLUcsfnWzxbiu9Cu4dRkda5w+EpTH
+Io1i6yxyGy2cYAwfm6cdsGgDpX+430NNg/494v8AcH8qRUMVoEJyVTGeeePcmoJ7QXul/ZjI8YdF
+G9DgjoeKALlFc4PCKAf8hO93djv6Vs6dYrp1oLdZZJQCSGkOT9KALK/dH0pagubZLyxltpCQk0ZR
+ivXBGKxF8G2QH/H1eZyxDb1zz745xwRn0oA6KkyFTJIAA6moLK0Sws47aNnZIwQC5yTznmnzQR3N
+s8EozHIpVh6g0AL58P8Az1T0+8KdHIkqB43V0PRlOQawh4O0gf8ALOXPUEyHINa9laJY2cVrGzMk
+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
+UUAf/9k=</Data>
+		</Thumbnail>
+	</Binary>
+</metadata>
