@@ -6,6 +6,7 @@ from land_grab_2.stl_dataset.step_4 import compute_summary
 from land_grab_2.stl_dataset.step_2.land_activity_search import activity_match
 from land_grab_2.uni_holdings_dataset import check_overlap, reverse_search
 import land_grab_2.stl_dataset.step_3.cession_purchase_price as cession_purchase_price
+from land_grab_2.stl_dataset.step_2_5 import get_cessions
 
 app = typer.Typer()
 
@@ -21,6 +22,11 @@ def stl_stage_2():
 
 
 @app.command()
+def stl_stage_2_5():
+    get_cessions.run()
+
+
+@app.command()
 def stl_stage_3():
     cession_purchase_price.run()
 
@@ -33,7 +39,7 @@ def stl_stage_4():
 @app.command()
 def pvt_holds_extract_raw_data(states=None):
     check_overlap.run(states)
-    
+
 
 @app.command()
 def pvt_holds_regrid_overlap(states=None):
@@ -45,5 +51,5 @@ def pvt_holds_rev_search():
     reverse_search.run()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app()

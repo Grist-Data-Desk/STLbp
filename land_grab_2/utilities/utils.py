@@ -17,12 +17,20 @@ import geopandas
 import requests
 from compose import compose
 from dask.diagnostics import ProgressBar
+
 # from joblib import Memory
 from tqdm import tqdm
 from tqdm.contrib.concurrent import process_map
 
-from land_grab_2.stl_dataset.step_1.constants import STATE_TRUST_DIRECTORY, QUERIED_DIRECTORY, CLEANED_DIRECTORY, \
-    MERGED_DIRECTORY, CESSIONS_DIRECTORY, SUMMARY_STATISTICS_DIRECTORY, STL_OUTPUT_DIRECTORY
+from land_grab_2.stl_dataset.step_1.constants import (
+    STATE_TRUST_DIRECTORY,
+    QUERIED_DIRECTORY,
+    CLEANED_DIRECTORY,
+    MERGED_DIRECTORY,
+    CESSIONS_DIRECTORY,
+    SUMMARY_STATISTICS_DIRECTORY,
+    STL_OUTPUT_DIRECTORY,
+)
 
 log = logging.getLogger(__name__)
 
@@ -36,28 +44,30 @@ def send_email(to, subject, message):
 
     # create email
     msg = EmailMessage()
-    msg['Subject'] = subject
-    msg['From'] = email_address
-    msg['To'] = to
+    msg["Subject"] = subject
+    msg["From"] = email_address
+    msg["To"] = to
     msg.set_content(message)
 
     # send email
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(email_address, email_password)
         smtp.send_message(msg)
 
 
-def in_parallel_fake(work_items,
-                     a_callable,
-                     postprocess=None,
-                     batched=True,
-                     show_progress=False,
-                     batch_size=10,
-                     **kwargs):
+def in_parallel_fake(
+    work_items,
+    a_callable,
+    postprocess=None,
+    batched=True,
+    show_progress=False,
+    batch_size=10,
+    **kwargs,
+):
     if postprocess:
         a_callable = compose(postprocess, a_callable)
 
-    log.info('Using for-loop as scheduler')
+    log.info("Using for-loop as scheduler")
 
     batches = [[w] for w in work_items]
     if batched:
@@ -66,56 +76,68 @@ def in_parallel_fake(work_items,
     if show_progress:
         batches = tqdm(batches)
 
-    return list(itertools.chain.from_iterable([[a_callable(work_item) for work_item in batch] for batch in batches]))
+    return list(
+        itertools.chain.from_iterable(
+            [[a_callable(work_item) for work_item in batch] for batch in batches]
+        )
+    )
 
 
-def in_parallel_exp(work_items,
-                    a_callable,
-                    scheduler='processes',
-                    postprocess=None,
-                    batched=True,
-                    show_progress=False,
-                    batch_size=10):
-    debug_parallelism = os.environ.get('DEBUG_PARALLEL')
+def in_parallel_exp(
+    work_items,
+    a_callable,
+    scheduler="processes",
+    postprocess=None,
+    batched=True,
+    show_progress=False,
+    batch_size=10,
+):
+    debug_parallelism = os.environ.get("DEBUG_PARALLEL")
     if debug_parallelism:
-        scheduler = 'synchronous' if len(debug_parallelism) <= 5 else debug_parallelism
+        scheduler = "synchronous" if len(debug_parallelism) <= 5 else debug_parallelism
 
     if postprocess:
         a_callable = compose(postprocess, a_callable)
 
-    if scheduler == 'synchronous':
-        log.info('Using Dask synchronous scheduler')
+    if scheduler == "synchronous":
+        log.info("Using Dask synchronous scheduler")
 
     all_results = process_map(a_callable, work_items)
     return all_results
 
 
-def in_parallel(work_items,
-                a_callable,
-                scheduler='processes',
-                postprocess=None,
-                batched=True,
-                show_progress=False,
-                batch_size=10):
-    debug_parallelism = os.environ.get('DEBUG_PARALLEL')
+def in_parallel(
+    work_items,
+    a_callable,
+    scheduler="processes",
+    postprocess=None,
+    batched=True,
+    show_progress=False,
+    batch_size=10,
+):
+    debug_parallelism = os.environ.get("DEBUG_PARALLEL")
     if debug_parallelism:
-        scheduler = 'synchronous' if len(debug_parallelism) <= 5 else debug_parallelism
+        scheduler = "synchronous" if len(debug_parallelism) <= 5 else debug_parallelism
 
     if postprocess:
         a_callable = compose(postprocess, a_callable)
 
-    if scheduler == 'synchronous':
-        log.info('Using Dask synchronous scheduler')
+    if scheduler == "synchronous":
+        log.info("Using Dask synchronous scheduler")
 
     all_results = []
     if not batched:
         with dask.config.set(scheduler=scheduler):
             if show_progress:
                 with ProgressBar():
-                    all_results = dask.bag.from_sequence(work_items).map(a_callable).compute()
+                    all_results = (
+                        dask.bag.from_sequence(work_items).map(a_callable).compute()
+                    )
                     return all_results
             else:
-                all_results = dask.bag.from_sequence(work_items).map(a_callable).compute()
+                all_results = (
+                    dask.bag.from_sequence(work_items).map(a_callable).compute()
+                )
                 return all_results
 
     partition_size = batch_size // 4
@@ -125,10 +147,18 @@ def in_parallel(work_items,
         with dask.config.set(scheduler=scheduler):
             if show_progress:
                 with ProgressBar():
-                    results = dask.bag.from_sequence(batch, partition_size=partition_size).map(a_callable).compute()
+                    results = (
+                        dask.bag.from_sequence(batch, partition_size=partition_size)
+                        .map(a_callable)
+                        .compute()
+                    )
                     all_results += results
             else:
-                results = dask.bag.from_sequence(batch, partition_size=partition_size).map(a_callable).compute()
+                results = (
+                    dask.bag.from_sequence(batch, partition_size=partition_size)
+                    .map(a_callable)
+                    .compute()
+                )
                 all_results += results
 
     return all_results
@@ -136,14 +166,17 @@ def in_parallel(work_items,
 
 def batch_iterable(work_items, batch_size, generator=False):
     return (
-        [work_items[i:i + batch_size] for i in range(0, len(work_items), batch_size)]
-        if not generator else
-        (work_items[i:i + batch_size] for i in range(0, len(work_items), batch_size))
+        [work_items[i : i + batch_size] for i in range(0, len(work_items), batch_size)]
+        if not generator
+        else (
+            work_items[i : i + batch_size]
+            for i in range(0, len(work_items), batch_size)
+        )
     )
 
 
 def read_json(p: Path):
-    with p.open('r') as fh:
+    with p.open("r") as fh:
         return json.load(fh)
 
 
@@ -156,108 +189,114 @@ class GristCache:
             GristCache.CACHE_DIR = cache_dir
         self.base_dir = GristCache.CACHE_DIR
 
-    def cache_write(self, obj, name, file_ext='.json'):
+    def cache_write(self, obj, name, file_ext=".json"):
         """
         this function requires the ENV var: PYTHONHASHSEED to be set to ensure stable hashing between runs
         """
-        here = self.base_dir / f'{hash(self.location)}'
+        here = self.base_dir / f"{hash(self.location)}"
         if not here.exists():
             here.mkdir(exist_ok=True, parents=True)
 
-        cached_file = here / f'{name}{file_ext}'
+        cached_file = here / f"{name}{file_ext}"
 
-        log.info(f'writing to cache: {str(cached_file)}')
-        if 'json' in file_ext:
-            with cached_file.open('w') as fp:
+        log.info(f"writing to cache: {str(cached_file)}")
+        if "json" in file_ext:
+            with cached_file.open("w") as fp:
                 json.dump(obj, fp)
 
         try:
-            if 'feather' in file_ext:
+            if "feather" in file_ext:
                 obj.to_feather(str(cached_file))
         except Exception as err:
-            log.error(f'CacheWriteError during feather WRITE path: {str(cached_file)} err: {err}')
+            log.error(
+                f"CacheWriteError during feather WRITE path: {str(cached_file)} err: {err}"
+            )
 
-    def cache_read(self, name, file_ext='.json'):
+    def cache_read(self, name, file_ext=".json"):
         """
         this function requires the ENV var: PYTHONHASHSEED to be set to ensure stable hashing between runs
         """
-        here = self.base_dir / f'{hash(self.location)}'
+        here = self.base_dir / f"{hash(self.location)}"
 
         if not here.exists():
             here.mkdir(exist_ok=True, parents=True)
 
-        cached_file = here / f'{name}{file_ext}'
+        cached_file = here / f"{name}{file_ext}"
         if not cached_file.exists():
-            log.info(f'cache-miss for: {str(cached_file)}')
+            log.info(f"cache-miss for: {str(cached_file)}")
             return None
 
-        log.info(f'reading from cache: {str(cached_file)}')
-        if 'json' in file_ext:
-            with cached_file.open('r') as fp:
+        log.info(f"reading from cache: {str(cached_file)}")
+        if "json" in file_ext:
+            with cached_file.open("r") as fp:
                 return json.load(fp)
         try:
-            if 'feather' in file_ext:
+            if "feather" in file_ext:
                 return geopandas.read_feather(str(cached_file))
         except Exception as err:
-            log.error(f'CacheReadError during feather READ path: {str(cached_file)} err: {err}')
+            log.error(
+                f"CacheReadError during feather READ path: {str(cached_file)} err: {err}"
+            )
 
 
-def fetch_remote(url_base, parcel_id: Optional[str] = None, retries=10, response_type='text'):
+def fetch_remote(
+    url_base, parcel_id: Optional[str] = None, retries=10, response_type="text"
+):
     """
     response_type: str - either `json` or `text`
     """
-    url_base = f'{url_base}?'
+    url_base = f"{url_base}?"
 
-    url_query = {'where': '1=1',
-                 'objectIds': f'{parcel_id}',
-                 'time': '',
-                 'geometry': '',
-                 'geometryType': 'esriGeometryEnvelope',
-                 'inSR': '',
-                 'spatialRel': 'esriSpatialRelIntersects',
-                 'resultType': 'none',
-                 'distance': 0.0,
-                 'units': 'esriSRUnit_Meter',
-                 'relationParam': '',
-                 'returnGeodetic': 'false',
-                 'outFields': '*',
-                 'returnGeometry': 'true',
-                 'returnCentroid': 'false',
-                 'featureEncoding': 'esriDefault',
-                 'multipatchOption': 'xyFootprint',
-                 'maxAllowableOffset': '',
-                 'geometryPrecision': '',
-                 'outSR': '',
-                 'defaultSR': '',
-                 'datumTransformation': '',
-                 'applyVCSProjection': 'false',
-                 'returnIdsOnly': 'false',
-                 'returnUniqueIdsOnly': 'false',
-                 'returnCountOnly': 'false',
-                 'returnExtentOnly': 'false',
-                 'returnQueryGeometry': 'false',
-                 'returnDistinctValues': 'false',
-                 'cacheHint': 'false',
-                 'orderByFields': '',
-                 'groupByFieldsForStatistics': '',
-                 'outStatistics': '',
-                 'having': '',
-                 'resultOffset': '',
-                 'resultRecordCount': '',
-                 'returnZ': 'false',
-                 'returnM': 'false',
-                 'returnExceededLimitFeatures': 'true',
-                 'quantizationParameters': '',
-                 'sqlFormat': 'none',
-                 'f': 'pjson',
-                 'token': ''
-                 }
+    url_query = {
+        "where": "1=1",
+        "objectIds": f"{parcel_id}",
+        "time": "",
+        "geometry": "",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": "",
+        "spatialRel": "esriSpatialRelIntersects",
+        "resultType": "none",
+        "distance": 0.0,
+        "units": "esriSRUnit_Meter",
+        "relationParam": "",
+        "returnGeodetic": "false",
+        "outFields": "*",
+        "returnGeometry": "true",
+        "returnCentroid": "false",
+        "featureEncoding": "esriDefault",
+        "multipatchOption": "xyFootprint",
+        "maxAllowableOffset": "",
+        "geometryPrecision": "",
+        "outSR": "",
+        "defaultSR": "",
+        "datumTransformation": "",
+        "applyVCSProjection": "false",
+        "returnIdsOnly": "false",
+        "returnUniqueIdsOnly": "false",
+        "returnCountOnly": "false",
+        "returnExtentOnly": "false",
+        "returnQueryGeometry": "false",
+        "returnDistinctValues": "false",
+        "cacheHint": "false",
+        "orderByFields": "",
+        "groupByFieldsForStatistics": "",
+        "outStatistics": "",
+        "having": "",
+        "resultOffset": "",
+        "resultRecordCount": "",
+        "returnZ": "false",
+        "returnM": "false",
+        "returnExceededLimitFeatures": "true",
+        "quantizationParameters": "",
+        "sqlFormat": "none",
+        "f": "pjson",
+        "token": "",
+    }
 
     # Respose, call on the server; data is the info if response returns something.
     try:
-
         response = requests.get(url=url_base, params=url_query)
-        if response_type == 'json':
+        if response_type == "json":
             data = response.json()
         else:
             data = response.text
@@ -265,7 +304,12 @@ def fetch_remote(url_base, parcel_id: Optional[str] = None, retries=10, response
     except Exception as err:
         if retries > 0:
             time.sleep(5)
-            return fetch_remote(url_base, parcel_id=parcel_id, retries=retries - 1, response_type=response_type)
+            return fetch_remote(
+                url_base,
+                parcel_id=parcel_id,
+                retries=retries - 1,
+                response_type=response_type,
+            )
         else:
             log.error(err)
             return None
@@ -273,52 +317,53 @@ def fetch_remote(url_base, parcel_id: Optional[str] = None, retries=10, response
 
 # Here, we want to call on the SD PLSS quarter-quarter server.
 def fetch_all_parcel_ids(url_base, retries=10):
-    url_base = f'{url_base}?'
+    url_base = f"{url_base}?"
 
-    url_query = {'where': '1=1',
-                 'objectIds': '',
-                 'time': '',
-                 'geometry': '',
-                 'geometryType': 'esriGeometryEnvelope',
-                 'inSR': '',
-                 'spatialRel': 'esriSpatialRelIntersects',
-                 'resultType': 'none',
-                 'distance': 0.0,
-                 'units': 'esriSRUnit_Meter',
-                 'relationParam': '',
-                 'returnGeodetic': 'false',
-                 'outFields': '*',
-                 'returnGeometry': 'true',
-                 'returnCentroid': 'false',
-                 'featureEncoding': 'esriDefault',
-                 'multipatchOption': 'xyFootprint',
-                 'maxAllowableOffset': '',
-                 'geometryPrecision': '',
-                 'outSR': '',
-                 'defaultSR': '',
-                 'datumTransformation': '',
-                 'applyVCSProjection': 'false',
-                 'returnIdsOnly': 'true',
-                 'returnUniqueIdsOnly': 'false',
-                 'returnCountOnly': 'false',
-                 'returnExtentOnly': 'false',
-                 'returnQueryGeometry': 'false',
-                 'returnDistinctValues': 'false',
-                 'cacheHint': 'false',
-                 'orderByFields': '',
-                 'groupByFieldsForStatistics': '',
-                 'outStatistics': '',
-                 'having': '',
-                 'resultOffset': '',
-                 'resultRecordCount': '',
-                 'returnZ': 'false',
-                 'returnM': 'false',
-                 'returnExceededLimitFeatures': 'true',
-                 'quantizationParameters': '',
-                 'sqlFormat': 'none',
-                 'f': 'json',
-                 'token': ''
-                 }
+    url_query = {
+        "where": "1=1",
+        "objectIds": "",
+        "time": "",
+        "geometry": "",
+        "geometryType": "esriGeometryEnvelope",
+        "inSR": "",
+        "spatialRel": "esriSpatialRelIntersects",
+        "resultType": "none",
+        "distance": 0.0,
+        "units": "esriSRUnit_Meter",
+        "relationParam": "",
+        "returnGeodetic": "false",
+        "outFields": "*",
+        "returnGeometry": "true",
+        "returnCentroid": "false",
+        "featureEncoding": "esriDefault",
+        "multipatchOption": "xyFootprint",
+        "maxAllowableOffset": "",
+        "geometryPrecision": "",
+        "outSR": "",
+        "defaultSR": "",
+        "datumTransformation": "",
+        "applyVCSProjection": "false",
+        "returnIdsOnly": "true",
+        "returnUniqueIdsOnly": "false",
+        "returnCountOnly": "false",
+        "returnExtentOnly": "false",
+        "returnQueryGeometry": "false",
+        "returnDistinctValues": "false",
+        "cacheHint": "false",
+        "orderByFields": "",
+        "groupByFieldsForStatistics": "",
+        "outStatistics": "",
+        "having": "",
+        "resultOffset": "",
+        "resultRecordCount": "",
+        "returnZ": "false",
+        "returnM": "false",
+        "returnExceededLimitFeatures": "true",
+        "quantizationParameters": "",
+        "sqlFormat": "none",
+        "f": "json",
+        "token": "",
+    }
 
     # If there is a failure while calling the server for a row, we wait 5 seconds, then check again. Repeat 5 times.
     try:
@@ -336,8 +381,8 @@ def fetch_all_parcel_ids(url_base, retries=10):
 
 def _to_kebab_case(string):
     """convert string to kebab case"""
-    if '_' in string:
-        return "-".join(string.lower().split('_'))
+    if "_" in string:
+        return "-".join(string.lower().split("_"))
     else:
         return "-".join(string.lower().split())
 
@@ -345,16 +390,14 @@ def _to_kebab_case(string):
 def _get_filename(state, label, alias, filetype):
     """return a filename in kebabcase"""
     if alias:
-        return f'{_to_kebab_case(state)}-{_to_kebab_case(label)}-{_to_kebab_case(alias)}{filetype}'
+        return f'{_to_kebab_case(state)}-{_to_kebab_case(label)}-{_to_kebab_case(alias).rstrip(".").replace("/", "-")}{filetype}'
     else:
-        return f'{_to_kebab_case(state)}-{_to_kebab_case(label)}{filetype}'
+        return f"{_to_kebab_case(state)}-{_to_kebab_case(label)}{filetype}"
 
 
 @functools.lru_cache()
 def extend_with_uuid(*args):
-    v_uniq = '-'.join(
-        [str(a) for a in args] + [str(uuid.uuid4())]
-    )
+    v_uniq = "-".join([str(a) for a in args] + [str(uuid.uuid4())])
     return v_uniq
 
 
@@ -377,7 +420,7 @@ def delete_files_and_subdirectories_in_directory(directory_path):
 
 def prettyify_list_of_strings(row):
     for col in row.keys():
-        if 'geometry' in col:
+        if "geometry" in col:
             if len(row[col]) == 0:
                 pass
             else:
@@ -386,50 +429,47 @@ def prettyify_list_of_strings(row):
             continue
 
         if isinstance(row[col], list):
-            row[col] = ', '.join([str(i) for i in list(set(row[col]))])
+            row[col] = ", ".join([str(i) for i in list(set(row[col]))])
     return row
 
 
 def state_specific_directory(directory, state=None):
     if state:
-        return directory + f'{state}/'
+        return directory + f"{state}/"
     else:
         return directory
 
 
 def _queried_data_directory(state=None):
-    return state_specific_directory(STATE_TRUST_DIRECTORY + QUERIED_DIRECTORY,
-                                    state)
+    return state_specific_directory(STATE_TRUST_DIRECTORY + QUERIED_DIRECTORY, state)
 
 
 def _cleaned_data_directory(state=None):
-    return state_specific_directory(STL_OUTPUT_DIRECTORY + CLEANED_DIRECTORY,
-                                    state)
+    return state_specific_directory(STL_OUTPUT_DIRECTORY + CLEANED_DIRECTORY, state)
 
 
 def _merged_data_directory(state=None):
-    return state_specific_directory(STL_OUTPUT_DIRECTORY + MERGED_DIRECTORY,
-                                    state)
+    return state_specific_directory(STL_OUTPUT_DIRECTORY + MERGED_DIRECTORY, state)
 
 
 def _cessions_data_directory(state=None):
-    return state_specific_directory(STATE_TRUST_DIRECTORY + CESSIONS_DIRECTORY,
-                                    state)
+    return state_specific_directory(STATE_TRUST_DIRECTORY + CESSIONS_DIRECTORY, state)
 
 
 def _summary_statistics_data_directory(state=None):
     return state_specific_directory(
-        STATE_TRUST_DIRECTORY + SUMMARY_STATISTICS_DIRECTORY, state)
+        STATE_TRUST_DIRECTORY + SUMMARY_STATISTICS_DIRECTORY, state
+    )
 
 
-def combine_delim_list(old_val, update_val, sep='+'):
+def combine_delim_list(old_val, update_val, sep="+"):
     old_val = str(old_val)
-    if old_val == 'nan':
-        old_val = ''
+    if old_val == "nan":
+        old_val = ""
 
     update_val = str(update_val)
-    if update_val == 'nan':
-        update_val = ''
+    if update_val == "nan":
+        update_val = ""
 
     update_vals = [v.strip() for v in update_val.split(sep) if v.strip()]
     old_vals = [v.strip() for v in old_val.split(sep) if v.strip()]
