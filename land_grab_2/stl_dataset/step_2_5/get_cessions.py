@@ -159,16 +159,16 @@ def aggregate_cessions_by_parcel(
         cession_fields = {}
         for i in range(8):
             cession_num = f"cession_num_{i+1:02d}"
-            present_day_tribe = f"C{i+1:02d}_present_day_tribe"
-            historical_tribe = f"C{i+1:02d}_tribe_named_in_land_cessions_1784-1894"
+            present_day_tribe = f"C{i+1}_present_day_tribe"
+            historical_tribe = f"C{i+1}_tribe_named_in_land_cessions_1784-1894"
 
             cession_fields[cession_num] = (
-                cession_list[i] if i < len(cession_list) else None
+                cession_list[i] if i < len(cession_list) else ""
             )
 
             # Look up the present day and historical tribes for each cession
             # number, if available.
-            if cession_fields[cession_num] is not None:
+            if cession_fields[cession_num]:
                 matching_cession = cession_codebook_df.loc[
                     cession_codebook_df["Cession_Number"] == cession_fields[cession_num]
                 ]
@@ -181,11 +181,11 @@ def aggregate_cessions_by_parcel(
                         "Tribe_Named_in_Land_Cessions_1784-1894"
                     ]
                 else:
-                    cession_fields[present_day_tribe] = None
-                    cession_fields[historical_tribe] = None
+                    cession_fields[present_day_tribe] = ""
+                    cession_fields[historical_tribe] = ""
             else:
-                cession_fields[present_day_tribe] = None
-                cession_fields[historical_tribe] = None
+                cession_fields[present_day_tribe] = ""
+                cession_fields[historical_tribe] = ""
 
         # Combine the new cession fields with the original group data.
         return pd.Series({**group.to_dict(), **cession_fields})
