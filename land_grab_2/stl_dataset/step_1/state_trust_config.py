@@ -320,43 +320,40 @@ STATE_TRUST_CONFIGS = {
             "NET_ACRES": NET_ACRES,
         },
     },
-    # 'SD-subsurface': {
-    #     DOWNLOAD_TYPE: SHAPEFILE_DOWNLOAD_TYPE,
-    #     STATE: 'SD',
-    #     UNIVERSITY: 'South Dakota State University',
-    #     MANAGING_AGENCY: 'Commissioner of School and Public Lands',
-    #     RIGHTS_TYPE: SUBSURFACE_RIGHTS_TYPE,
-    #     STATE_ENABLING_ACT: '25 Stat. 676-684, esp. 679-81 (1889)',
-    #     LOCAL_DATA_SOURCE: STATE_TRUST_DATA_SOURCE_DIRECTORY + 'SD-Subsurface',
-    #     ATTRIBUTE_LABEL_TO_FILTER_BY: ['*'],
-    #     ATTRIBUTE_CODE_TO_ALIAS_MAP: {
-    #         "*": 'South Dakota State University'
-    #     },
-    #     EXISTING_COLUMN_TO_FINAL_COLUMN_MAP: {
-    #         'RECRDAREAN': ACRES,
-    #         'QQSEC': ALIQUOT,
-    #     },
-    # },
-    # 'SD-surface': {
-    #     DOWNLOAD_TYPE: SHAPEFILE_DOWNLOAD_TYPE,
-    #     STATE: 'SD',
-    #     UNIVERSITY: 'South Dakota State University',
-    #     MANAGING_AGENCY: 'Commissioner of School and Public Lands',
-    #     RIGHTS_TYPE: SURFACE_RIGHTS_TYPE,
-    #     STATE_ENABLING_ACT: '25 Stat. 676-684, esp. 679-81 (1889)',
-    #     LOCAL_DATA_SOURCE: STATE_TRUST_DATA_SOURCE_DIRECTORY + 'SD-surface',
-    #     ATTRIBUTE_LABEL_TO_FILTER_BY: ['Trust_Name'],
-    #     ATTRIBUTE_CODE_TO_ALIAS_MAP: {
-    #         'SDSU EXP. STATION': 'SDSU Agricultural Experiment Station',
-    #         'SOUTH DAKOTA STATE UNIVERSITY': 'South Dakota State University'
-    #     },
-    #     EXISTING_COLUMN_TO_FINAL_COLUMN_MAP: {
-    #         'RECRDAREAN': ACRES,
-    #         'QQSEC': ALIQUOT,
-    #         'Activity': ACTIVITY,
-    #         'Trust_Name': TRUST_NAME
-    #     },
-    # },
+    'SD-subsurface': {
+        DOWNLOAD_TYPE: SHAPEFILE_DOWNLOAD_TYPE,
+        STATE: 'SD',
+        UNIVERSITY: 'South Dakota State University',
+        MANAGING_AGENCY: 'Commissioner of School and Public Lands',
+        RIGHTS_TYPE: SUBSURFACE_RIGHTS_TYPE,
+        STATE_ENABLING_ACT: '25 Stat. 676-684, esp. 679-81 (1889)',
+        LOCAL_DATA_SOURCE: STATE_TRUST_DATA_SOURCE_DIRECTORY + 'SD-subsurface',
+        ATTRIBUTE_LABEL_TO_FILTER_BY: ['*'],
+        ATTRIBUTE_CODE_TO_ALIAS_MAP: {
+            "*": 'Training School'
+        },
+        EXISTING_COLUMN_TO_FINAL_COLUMN_MAP: {
+            'RECRDAREAN': ACRES,
+            'QQSEC': ALIQUOT,
+        },
+    },
+    'SD-surface': {
+        DOWNLOAD_TYPE: SHAPEFILE_DOWNLOAD_TYPE,
+        STATE: 'SD',
+        UNIVERSITY: 'South Dakota State University',
+        MANAGING_AGENCY: 'Commissioner of School and Public Lands',
+        RIGHTS_TYPE: SURFACE_RIGHTS_TYPE,
+        STATE_ENABLING_ACT: '25 Stat. 676-684, esp. 679-81 (1889)',
+        LOCAL_DATA_SOURCE: STATE_TRUST_DATA_SOURCE_DIRECTORY + 'SD-surface',
+        ATTRIBUTE_LABEL_TO_FILTER_BY: ['Land Class'],
+        ATTRIBUTE_CODE_TO_ALIAS_MAP: {
+            'DOC, JUVENILE PROGRAMS': 'Training School'
+        },
+        EXISTING_COLUMN_TO_FINAL_COLUMN_MAP: {
+            'RECRDAREAN': ACRES,
+            'QQSEC': ALIQUOT,
+        },
+    },
     "UT-subsurface-oil-and-gas": {
         DOWNLOAD_TYPE: API_QUERY_DOWNLOAD_TYPE,
         STATE: "UT",
