@@ -131,7 +131,10 @@ def add_price_columns(
     col_seq = []
     cession_price_cols = cession_price_cols.copy()
     for col in cols:
-        if col.endswith("present_day_tribe"):
+        if "all_cession_numbers" in col:  # Direct check for the column name
+            col_seq.append(col)
+            col_seq.append('price_paid_for_parcel')
+        elif col.endswith("present_day_tribe"):
             col_seq.append(cession_price_cols.pop(0))
             col_seq.append(col)
         else:

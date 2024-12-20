@@ -381,6 +381,5 @@ def calculate_summary_statistics_helper(summary_statistics_data_directory):
     gis_acres_col = GIS_ACRES if GIS_ACRES in gdf_unis.columns else 'gis_calculated_acres'
     gdf_unis[GIS_ACRES] = gdf_unis[gis_acres_col].astype(float)
 
-    university_summary(gdf_unis, output_dir)
     tribe_summary(gdf_tribes, output_dir)
 
