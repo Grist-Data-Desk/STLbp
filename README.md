@@ -47,9 +47,9 @@ $ DATA=data python run.py --help
 
 `run.py` expects a particular directory structure for the datasets, which is already enforced by this repository's directory structure. As such, you should not move any files from their current locations.
 
-### State Trust Lands (STL) Dataset
+### State Trust Lands benefitting prisons (STLbp) Dataset
 
-The STL dataset is built in stages, with the output of each stage becoming the input of the next stage.
+The STLbp dataset is built in stages, with the output of each stage becoming the input of the next stage.
 The following assumes your data directory is itself called `data` and all paths will refer to it as such.
 
 #### Stage 1
