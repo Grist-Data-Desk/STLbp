@@ -82,12 +82,12 @@ The output of this stage is written to `data/stl_dataset/step_2/output/stl_datas
 
 #### Stage 2.5
 
-Stage 2.5 involves enriching the unified dataset from Stage 2 (`data/stl_dataset/step_2/output/stl_dataset_extra_activities.[csv, geojson]`) with land-cession information for each parcel. The new dataset will be named `stl_dataset_extra_activities_plus_cessions.csv` and located at `data/stl_dataset/step_2_5/output/` (though, as evidenced by the Stage 3 input details, the title is not important to the code).
+Stage 2.5 involves enriching the unified dataset from Stage 2 (`data/stl_dataset/step_2/output/stl_dataset_extra_activities.[csv, geojson]`) with land-cession information for each parcel. In previous investigations, this step was a manual effort; it has since been automated. The new dataset will be named `stl_dataset_extra_activities_plus_cessions.csv` and located at `data/stl_dataset/step_2_5/output/` (though, as evidenced by the Stage 3 input details, the title is not important to the code).
 
 To execute Stage 2.5, run the following command at the terminal:
 
 ```sh
-$ DATA=data python run.py stl-stage-2_5
+$ DATA=data python run.py stl-stage-2-5
 ```
 
 #### Stage 3
