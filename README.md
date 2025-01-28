@@ -110,9 +110,8 @@ To execute Stage 4, run the following command at the terminal:
 $ DATA=data python run.py stl-stage-4
 ```
 
-This command will calculate summaries connecting prisons and cessions to tribes using the output of Stage 3 (`data/stl_dataset/step_3/output/stl_dataset_extra_activities_plus_cessions_plus_prices.[csv, geojson]`).
+This command will calculate summaries connecting cessions to tribes using the output of Stage 3 (`data/stl_dataset/step_3/output/stl_dataset_extra_activities_plus_cessions_plus_prices.[csv, geojson]`).
 
-The outputs of this stage are three files, written to:
-- `data/stl_dataset/step_4/output/prison-summary.csv`
+The outputs of this stage are two files, written to:
 - `data/stl_dataset/step_4/output/tribe-summary.csv`
 - `data/stl_dataset/step_4/output/tribe-summary-condensed.csv`
