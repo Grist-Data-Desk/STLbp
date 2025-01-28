@@ -1,58 +1,58 @@
-,present_day_tribe,cession_count,cession_number,subsurface_acres,surface_acres,timber_acres,university,state
-0,Apache Tribe of Oklahoma,1,688,236217.2,164859.73,,"Colorado State University, New Mexico State University","CO, NM"
-1,"Arapaho Tribe of the Wind River Reservation, Wyoming",4,"426, 477, 598, 597",99290.86,73067.96,,"Colorado State University, South Dakota State University, University of Wyoming","SD, CO, WY"
-2,"Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana",5,"597, 614, 699, 598, 516",58415.33,31323.67,,"North Dakota State University, South Dakota State University, University of Wyoming","SD, WY, ND"
-3,"Big Pine Band of Owens Valley Paiute Shoshone Indians of the Big Pine Reservation, California",1,558,159.51,,,Utah State University,UT
-4,"Bishop Paiute Tribe, California",1,558,159.51,,,Utah State University,UT
-5,Blackfeet Tribe of the Blackfeet Indian Reservation of Montana,5,"399, 692, 574, 565, 398",69340.12,56227.89,,Montana State University,MT
-6,Bridgeport Paiute Indian Colony of California,1,558,159.51,,,Utah State University,UT
-7,Burns Paiute Tribe of the Burns Paiute In,1,558,159.51,,,Utah State University,UT
-8,"Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota",5,"597, 614, 699, 598, 516",58415.33,31323.67,,"North Dakota State University, South Dakota State University, University of Wyoming","SD, WY, ND"
-9,"Cheyenne and Arapaho Tribes, Oklahoma",2,"426, 477",52785.76,42222.88,,"Colorado State University, University of Wyoming","CO, WY"
-10,"Chippewa Cree Indians of the Rocky Boy's Reservation, Montana",1,445,1078.74,,,North Dakota State University,ND
-11,"Coeur D'Alene Tribe, Idaho",1,553,18465.4,15046.44,6731.66,"University of Idaho, Washington State University","WA, ID"
-12,"Comanche Nation, Oklahoma",1,478,141514.45,113069.19,,"Colorado State University, New Mexico State University","CO, NM"
-13,"Confederated Salish & Kootenai Tribes of the Flathead Reservation, Montana",2,"373, 399",44125.48,34500.35,,"University of Idaho, Montana State University","MT, ID"
-14,"Confederated Tribes and Bands of the Yakama Nation, Washington",2,"458, 364",54807.6,42304.03,42304.03,Washington State University,WA
-15,"Confederated Tribes of the Chehalis Reservation, Washington",1,458,14742.85,14047.65,14047.65,Washington State University,WA
-16,"Confederated Tribes of the Colville Reservation, Washington",3,"373, 533, 532",38064.01,24485.36,7105.19,"University of Idaho, Washington State University, Montana State University","MT, WA, ID"
-17,Confederated Tribes of the Goshute Reservation,1,520,35040.49,18309.27,,"Utah State University, University of Idaho, University of Wyoming","UT, WY, ID"
-18,Crow Creek Sioux Tribe of the Crow Creek Reservat,2,"597, 598",46505.1,30845.08,,"South Dakota State University, University of Wyoming","SD, WY"
-19,"Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota",3,"614, 699, 516",11910.23,478.59,,"North Dakota State University, South Dakota State University","SD, ND"
-20,Crow Tribe of Montana,4,"517, 565, 619, 574",162198.28,119778.04,,"University of Wyoming, Montana State University","MT, WY"
-21,Duwamish Tribe of Indians [Unrecognized],1,347,6645.68,6832.55,6832.55,Washington State University,WA
-22,Flandreau Santee Sioux Tribe of Sou,3,"614, 699, 516",11910.23,478.59,,"North Dakota State University, South Dakota State University","SD, ND"
-23,Fort Belknap Indian Community of the Fort Belknap Reservation of Montana,5,"692, 574, 565, 620, 529",22958.48,14908.84,,"North Dakota State University, University of Wyoming, Montana State University","MT, WY, ND"
-24,Fort Sill Apache Tribe of Oklahoma,1,688,236217.2,164859.73,,"Colorado State University, New Mexico State University","CO, NM"
-25,"Jamestown S'Klallam Tribe, Washington",1,353,7729.9,6688.32,6688.32,Washington State University,WA
-26,"Jicarilla Apache Nation, New Mexico",1,688,236217.2,164859.73,,"Colorado State University, New Mexico State University","CO, NM"
-27,"Keweenaw Bay Indian Community, Michigan",1,398,26908.54,20301.0,,Montana State University,MT
-28,Kiowa Indian Tribe of Oklahoma,1,478,141514.45,113069.19,,"Colorado State University, New Mexico State University","CO, NM"
-29,"Lac Vieux Desert Band of Lake Superior Chippewa Indians, Michigan",1,398,26908.54,20301.0,,Montana State University,MT
-30,"Lower Elwha Tribal Community, Washington",1,353,7729.9,6688.32,6688.32,Washington State University,WA
-31,"Mescalero Apache Tribe of the Mescalero Reservation, New Mexico",1,688,236217.2,164859.73,,"Colorado State University, New Mexico State University","CO, NM"
-32,"Navajo Nation, Arizona, New Mexico & Utah",1,519,1936.91,2086.62,,"New Mexico State University, University of Arizona","AZ, NM"
-33,Nez Perce Tribe of Idaho,3,"399, 366, 441",83145.1,77270.15,,"University of Idaho, Montana State University","MT, ID"
-34,"Nisqually Indian Tribe of the Nisqually Reservation, Washington",1,345,4862.98,3538.77,3538.77,Washington State University,WA
-35,Nonfederally Recognized Indian Groups,1,345,4862.98,3538.77,3538.77,Washington State University,WA
-36,"Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana",2,"426, 477",52785.76,42222.88,,"Colorado State University, University of Wyoming","CO, WY"
-37,Northwestern Band of Shoshoni Nation of Utah (Washakie),1,444,94929.32,36796.24,,University of Idaho,ID
-38,"Port Gamble S'Klallam Tribe, Washington",1,353,7729.9,6688.32,6688.32,Washington State University,WA
-39,"Puyallup Tribe of the Puyallup Reservation, Washington",1,345,4862.98,3538.77,3538.77,Washington State University,WA
-40,"Quinault Tribe of the Quinault Reservation, Washington",1,458,14742.85,14047.65,14047.65,Washington State University,WA
-41,"Red Lake Band of Chippewa Indians, Minnesota",1,445,1078.74,,,North Dakota State University,ND
-42,"San Carlos Apache Tribe of the San Carlos Reservation, Arizona",1,689,133080.36,128826.5,,"New Mexico State University, University of Arizona","AZ, NM"
-43,"Shoalwater Bay Tribe of the Shoalwater Bay Indian Reservation, Washington",1,458,14742.85,14047.65,14047.65,Washington State University,WA
-44,Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho,1,520,35040.49,18309.27,,"Utah State University, University of Idaho, University of Wyoming","UT, WY, ID"
-45,"Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota",2,"497, 538",12460.41,1077.52,,"North Dakota State University, South Dakota State University","SD, ND"
-46,"Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado",1,451,57.5,,,Utah State University,UT
-47,"Squaxin Island Tribe of the Squaxin Island Reservation, Washington",1,345,4862.98,3538.77,3538.77,Washington State University,WA
-48,"Suquamish Indian Tribe of the Port Madison Reservation, Washington",1,347,6645.68,6832.55,6832.55,Washington State University,WA
-49,Te-Moak Tribe of Western Shoshone Indians of Nevada,1,444,94929.32,36796.24,,University of Idaho,ID
-50,"Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota",2,"529, 620",4330.51,261.01,,"North Dakota State University, University of Wyoming, Montana State University","MT, WY, ND"
-51,Tonto Apache Tribe of Arizona,1,689,133080.36,128826.5,,"New Mexico State University, University of Arizona","AZ, NM"
-52,Turtle Mountain Band of Chippewa Indians of North Dakota,2,"445, 654",1479.58,,,North Dakota State University,ND
-53,"Ute Indian Tribe of the Uintah & Ouray Reservation, Utah",2,"451, 432",3345.94,,,Utah State University,UT
-54,"Ute Mountain Ute Tribe, Colorado, New Mexico, & Utah",2,"451, 515",1422.34,,,"Colorado State University, Utah State University","UT, CO"
-55,"White Earth Band of Minnesota Chippewa Tribe, Minnesota",1,445,1078.74,,,North Dakota State University,ND
-56,"White Mountain Apache Tribe of the Fort Apache Reservation, Arizona",2,"689, 688",369297.56,293686.23,,"Colorado State University, University of Arizona, New Mexico State University","CO, NM, AZ"
+,present_day_tribe,cession_count,cession_number,subsurface_acres,surface_acres,timber_acres,state
+0,Apache Tribe of Oklahoma,1,688,236217.2,164859.73,,"CO, NM"
+1,"Arapaho Tribe of the Wind River Reservation, Wyoming",4,"426, 477, 598, 597",99290.86,73067.96,,"SD, CO, WY"
+2,"Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana",5,"597, 614, 699, 598, 516",58415.33,31323.67,,"SD, WY, ND"
+3,"Big Pine Band of Owens Valley Paiute Shoshone Indians of the Big Pine Reservation, California",1,558,159.51,,,UT
+4,"Bishop Paiute Tribe, California",1,558,159.51,,,UT
+5,Blackfeet Tribe of the Blackfeet Indian Reservation of Montana,5,"399, 692, 574, 565, 398",69340.12,56227.89,,MT
+6,Bridgeport Paiute Indian Colony of California,1,558,159.51,,,UT
+7,Burns Paiute Tribe of the Burns Paiute In,1,558,159.51,,,UT
+8,"Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota",5,"597, 614, 699, 598, 516",58415.33,31323.67,,"SD, WY, ND"
+9,"Cheyenne and Arapaho Tribes, Oklahoma",2,"426, 477",52785.76,42222.88,,"CO, WY"
+10,"Chippewa Cree Indians of the Rocky Boy's Reservation, Montana",1,445,1078.74,,,ND
+11,"Coeur D'Alene Tribe, Idaho",1,553,18465.4,15046.44,6731.66,"WA, ID"
+12,"Comanche Nation, Oklahoma",1,478,141514.45,113069.19,,"CO, NM"
+13,"Confederated Salish & Kootenai Tribes of the Flathead Reservation, Montana",2,"373, 399",44125.48,34500.35,,"MT, ID"
+14,"Confederated Tribes and Bands of the Yakama Nation, Washington",2,"458, 364",54807.6,42304.03,42304.03,WA
+15,"Confederated Tribes of the Chehalis Reservation, Washington",1,458,14742.85,14047.65,14047.65,WA
+16,"Confederated Tribes of the Colville Reservation, Washington",3,"373, 533, 532",38064.01,24485.36,7105.19,"MT, WA, ID"
+17,Confederated Tribes of the Goshute Reservation,1,520,35040.49,18309.27,,"UT, WY, ID"
+18,Crow Creek Sioux Tribe of the Crow Creek Reservat,2,"597, 598",46505.1,30845.08,,"SD, WY"
+19,"Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota",3,"614, 699, 516",11910.23,478.59,,"SD, ND"
+20,Crow Tribe of Montana,4,"517, 565, 619, 574",162198.28,119778.04,,"MT, WY"
+21,Duwamish Tribe of Indians [Unrecognized],1,347,6645.68,6832.55,6832.55,WA
+22,Flandreau Santee Sioux Tribe of Sou,3,"614, 699, 516",11910.23,478.59,,"SD, ND"
+23,Fort Belknap Indian Community of the Fort Belknap Reservation of Montana,5,"692, 574, 565, 620, 529",22958.48,14908.84,,"MT, WY, ND"
+24,Fort Sill Apache Tribe of Oklahoma,1,688,236217.2,164859.73,,"CO, NM"
+25,"Jamestown S'Klallam Tribe, Washington",1,353,7729.9,6688.32,6688.32,WA
+26,"Jicarilla Apache Nation, New Mexico",1,688,236217.2,164859.73,,"CO, NM"
+27,"Keweenaw Bay Indian Community, Michigan",1,398,26908.54,20301,,MT
+28,Kiowa Indian Tribe of Oklahoma,1,478,141514.45,113069.19,,"CO, NM"
+29,"Lac Vieux Desert Band of Lake Superior Chippewa Indians, Michigan",1,398,26908.54,20301,,MT
+30,"Lower Elwha Tribal Community, Washington",1,353,7729.9,6688.32,6688.32,WA
+31,"Mescalero Apache Tribe of the Mescalero Reservation, New Mexico",1,688,236217.2,164859.73,,"CO, NM"
+32,"Navajo Nation, Arizona, New Mexico & Utah",1,519,1936.91,2086.62,,"AZ, NM"
+33,Nez Perce Tribe of Idaho,3,"399, 366, 441",83145.1,77270.15,,"MT, ID"
+34,"Nisqually Indian Tribe of the Nisqually Reservation, Washington",1,345,4862.98,3538.77,3538.77,WA
+35,Nonfederally Recognized Indian Groups,1,345,4862.98,3538.77,3538.77,WA
+36,"Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana",2,"426, 477",52785.76,42222.88,,"CO, WY"
+37,Northwestern Band of Shoshoni Nation of Utah (Washakie),1,444,94929.32,36796.24,,ID
+38,"Port Gamble S'Klallam Tribe, Washington",1,353,7729.9,6688.32,6688.32,WA
+39,"Puyallup Tribe of the Puyallup Reservation, Washington",1,345,4862.98,3538.77,3538.77,WA
+40,"Quinault Tribe of the Quinault Reservation, Washington",1,458,14742.85,14047.65,14047.65,WA
+41,"Red Lake Band of Chippewa Indians, Minnesota",1,445,1078.74,,,ND
+42,"San Carlos Apache Tribe of the San Carlos Reservation, Arizona",1,689,133080.36,128826.5,,"AZ, NM"
+43,"Shoalwater Bay Tribe of the Shoalwater Bay Indian Reservation, Washington",1,458,14742.85,14047.65,14047.65,WA
+44,Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho,1,520,35040.49,18309.27,,"UT, WY, ID"
+45,"Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota",2,"497, 538",12460.41,1077.52,,"SD, ND"
+46,"Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado",1,451,57.5,,,UT
+47,"Squaxin Island Tribe of the Squaxin Island Reservation, Washington",1,345,4862.98,3538.77,3538.77,WA
+48,"Suquamish Indian Tribe of the Port Madison Reservation, Washington",1,347,6645.68,6832.55,6832.55,WA
+49,Te-Moak Tribe of Western Shoshone Indians of Nevada,1,444,94929.32,36796.24,,ID
+50,"Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota",2,"529, 620",4330.51,261.01,,"MT, WY, ND"
+51,Tonto Apache Tribe of Arizona,1,689,133080.36,128826.5,,"AZ, NM"
+52,Turtle Mountain Band of Chippewa Indians of North Dakota,2,"445, 654",1479.58,,,ND
+53,"Ute Indian Tribe of the Uintah & Ouray Reservation, Utah",2,"451, 432",3345.94,,,UT
+54,"Ute Mountain Ute Tribe, Colorado, New Mexico, & Utah",2,"451, 515",1422.34,,,"UT, CO"
+55,"White Earth Band of Minnesota Chippewa Tribe, Minnesota",1,445,1078.74,,,ND
+56,"White Mountain Apache Tribe of the Fort Apache Reservation, Arizona",2,"689, 688",369297.56,293686.23,,"CO, NM, AZ"
